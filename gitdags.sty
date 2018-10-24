@@ -232,13 +232,13 @@
 }
 
 % HEAD symbolic reference
-\newcommand\gitHEAD[2]{%
+\newcommand\gitHEAD[3]{%
   \node[
     DAGref,
     fill          = solarized-red!20,
     node distance = 1em,
-  ] (gitHEAD) [#1] {HEAD};
-  \draw[DAGrefedge] (#2) -- (gitHEAD);
+  ] (gitHEAD) [#2] {#1};
+  \draw[DAGrefedge] (#3) -- (gitHEAD);
 }
 
 % the following macro is useful for explaining how merge conflicts arise
